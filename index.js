@@ -15,8 +15,12 @@ const toDoListEl = document.getElementById("todo-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-    
-    push(toDoListInDB, inputValue)
+    if (inputValue) {
+        push(toDoListInDB, inputValue)
+    }
+    else {
+        null
+    }
     
     clearInputFieldEl()
 })
